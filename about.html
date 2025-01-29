@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .logo img {
+            height: 50px; /* Set the height of the logo */
+            margin-right: 15px; /* Add margin to the right of the logo */
+        }
+        /* Style for the navbar */
+        .navbar {
+            display: flex;  /* Align items horizontally */
+            align-items: center;      /* Align items vertically */
+            justify-content: space-between; /* Space between the logo and the links */
+            color: white;  /* Set the color of the text */
+            background-color: #008080; /* Set the background color of the navbar */
+            padding: 10px 20px; /* Add padding to the navbar */
+            border: 10px;  /* Add border radius to the navbar */
+        }
+
+        /* Style for the navbar links */
+        .nav-links {
+            display: flex; /* Align links horizontally */
+            list-style: none; /* Remove default bullet points */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Add margin to the left and right of the links */
+        }
+
+        .nav-links li a {
+            text-decoration: none; /* Remove underline from links */
+            color: white; /* Set the color of the links */
+            font-size: 16px; /* Set the font size of the links */
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .search {
+            display: flex; /* Align items horizontally */
+            align-items: center;    /* Align items vertically */
+            margin-left: auto; /* Align the search bar to the right */
+        }
+
+        .search input {
+            background-color: #eee7e7; /* Set the background color of the input */
+            color: rgb(9, 14, 17); /* Set the color of the text */
+            border-radius: 5px; /* Add border radius to the input */
+            border-color: rgb(18, 105, 105); /* Set the border color */
+            border-style: dotted; /* Set the border style */
+            padding: 5px;   /* Add padding to the input */
+            margin-right: 5px;  /* Add margin to the right of the input */
+        }
+
+        .search button:hover {
+            background-color: #0a4545; /* Change the background color on hover */
+            color: white; /* Change the color on hover */
+        }
+
+        .logo {
+            display: flex; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
+            text-decoration: none; /* Remove underline from the logo */
+        }
+
+        /* Container for layout */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1, h2, h3 {
+            color: #008080;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: center;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        /* Flexbox for team members */
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team div {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        /* Button Styles  */
+        button[type="button"] {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display: block;
+        }
+
+        button[type="button"]:hover {
+            background-color: #0c5f5f;
+        }
+
+        /* Footer CTA Styling */
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+            
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 2s ease-in;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #008080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>We are a group of students from SVMIT, Bharuch (Shri S'ad Vidya Mandal Institute of Technology) College, passionate about connecting people through the power of organ donation. Our goal is to spread awareness and build a supportive community around this vital cause.</p>
+
+        <h2>Our Journey</h2>
+        <p>Our journey started during a college seminar when we first learned about the critical shortage of organ donors. Inspired by the stories of lives saved, we decided to take action by raising awareness among our college community. We began by organizing events and campaigns, reaching out to students and faculty to share the importance of organ donation. What began as a small initiative has now become a growing movement within our college, with plans to expand our outreach further.</p>
+
+        <h2>Meet Our Team</h2>
+        <div class="team">
+            <div>
+                <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Team Member 1">
+                <h3>Sonal Gohil</h3>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Team Member 1">
+                <h3>Jahnavi Kachhiya</h3>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Team Member 1">
+                <h3>Muskan Master</h3>
+            </div>
+            <div>
+                <img src="{{ url_for('static', filename='images/team-member1.jpg') }}" alt="Team Member 1">
+                <h3>Pooja Mistry</h3>
+            </div>
+        </div>
+
+        <h2>Our Mission</h2>
+        <p>To raise awareness about organ donation and encourage students to become donors, saving lives through collective action and support.</p>
+
+        <div class="cta">
+            <h2>Join Our Cause</h2>
+            <p>Together, we can make a difference. Become a donor or volunteer today!</p>
+            <button type="button" onclick="window.location.href='/donate'">Donate Now</button>
+            <button type="button" onclick="window.location.href='/volunteer'">Become a Volunteer</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 SVMIT College | All Rights Reserved
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function(element) {
+                var position = element.getBoundingClientRect().top;
+                var screenPosition = window.innerHeight;
+                if (position < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

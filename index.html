@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="mainText">
+        <h1 class="top"> </h1>
+        <h1>Organ Donation</h1>
+        <p>Its in our hands if we want to share our life with other...</p>
+        <div class="box">
+            <a href="https://notto.abdm.gov.in/" class="button"> Explore </a>
+            </div>
+    </div>
+        <div class="content1">
+        <h1> Donate here!</h1>
+        <div class="organ">
+        <p> <a href="{{ url_for('heart') }}"><img src="{{ url_for('static', filename='images/heart.jpg') }}" alt="heart"></a>
+            <a href="{{ url_for('eye') }}"><img src="{{ url_for('static', filename='images/eye.jpg') }}" alt="eye"></a>
+            <a href="{{ url_for('lung') }}"><img src="{{ url_for('static', filename='images/lung.jpg') }}" alt="lung"></a>
+            <a href="{{ url_for('kidney') }}"><img src="{{ url_for('static', filename='images/kidney.jpg') }}" alt="kidney"></a>
+            <a href="{{ url_for('liver') }}"><img src="{{ url_for('static', filename='images/liver.jpg') }}" alt="liver"></a>
+            <a href="{{ url_for('instestine') }}"><img src="{{ url_for('static', filename='images/instestine.jpg') }}" alt="intestine"></a>
+        </p>
+        </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

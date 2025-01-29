@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is Liver Donation?</h2>  
+            <p>Liver donation is the process of giving part or all of your liver to someone whose liver is failing due to diseases like cirrhosis, hepatitis, or liver cancer. The liver is the only organ in the body that can regenerate, so a donor can typically live with part of their liver while the rest grows back. Liver donation can save lives by providing a healthy liver to someone in need, offering them a chance for survival and a better quality of life.</p>
+        
+        <h2>Why do some people need liver transplants?</h2>
+            <p>People need liver transplants when their liver is damaged by diseases like cirrhosis, hepatitis, or liver cancer. These conditions cause the liver to stop working properly. A liver transplant can restore proper liver function and save lives. It helps the recipient live a longer, healthier life.</p>
+    
+        <h2>Why become a liver donor?</h2>
+        <p>Becoming a liver donor can save someone's life by providing them with a healthy liver when theirs is failing. The liver can regenerate, so a living donor can give part of their liver and still live a healthy life. It's a selfless act that gives someone a second chance at life. Your donation can make a huge difference and offer hope to those in need.</p>
+
+        <h2>How to Become a Liver Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your Liver</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

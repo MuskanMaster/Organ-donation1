@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .logo img {
+            height: 50px; /* Set the height of the logo */
+            margin-right: 15px; /* Add margin to the right of the logo */
+        }
+        /* Style for the navbar */
+        .navbar {
+            display: flex;  /* Align items horizontally */
+            align-items: center;      /* Align items vertically */
+            justify-content: space-between; /* Space between the logo and the links */
+            color: white;  /* Set the color of the text */
+            background-color: #008080; /* Set the background color of the navbar */
+            padding: 10px 20px; /* Add padding to the navbar */
+            border: 10px;  /* Add border radius to the navbar */
+        }
+
+        /* Style for the navbar links */
+        /* Navigation links */
+        .nav-links {
+            display: flex; /* Align links horizontally */
+            list-style: none; /* Remove default bullet points */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Add margin to the left and right of the links */
+        }
+
+        .nav-links li a {
+            text-decoration: none; /* Remove underline from links */
+            color: white; /* Set the color of the links */
+            font-size: 16px; /* Set the font size of the links */
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .search {
+            display: flex; /* Align items horizontally */
+            align-items: center;    /* Align items vertically */
+            margin-left: auto; /* Align the search bar to the right */
+        }
+
+        .search input {
+            background-color: #eee7e7; /* Set the background color of the input */
+            color: rgb(9, 14, 17); /* Set the color of the text */
+            border-radius: 5px; /* Add border radius to the input */
+            border-color: rgb(18, 105, 105); /* Set the border color */
+            border-style: dotted; /* Set the border style */
+            padding: 5px;   /* Add padding to the input */
+            margin-right: 5px;  /* Add margin to the right of the input */
+        }
+
+        .search button:hover {
+            background-color: #0a4545; /* Change the background color on hover */
+            color: white; /* Change the color on hover */
+        }
+
+        .logo {
+            display: flex; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
+            text-decoration: none; /* Remove underline from the logo */
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        /* Donation Options */
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .option {
+            width: 200px;
+            padding: 20px;
+            background-color: #008080;
+            color: white;
+            text-align: center;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .option:hover {
+            background-color: #0a4545;
+        }
+
+        /* Donation Forms */
+        .donation-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .donation-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .form-group button {
+            background-color: #008080;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #0a4545;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="title">Welcome to the Donation Page</div>
+
+        <div class="options">
+            <!-- Add an onclick event to handle the navigation -->
+            <div class="option" onclick="window.location.href='/donor'">I am a Donor</div>
+            <div class="option" onclick="window.location.href='/receiver'">I am a Receiver</div>
+        </div>
+        
+</body>
+</html>

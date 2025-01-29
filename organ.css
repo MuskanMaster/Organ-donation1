@@ -1,0 +1,155 @@
+img{
+    margin: 0 auto; 
+    display: block; 
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+body {
+    font-family: Arial, sans-serif; /* Set the font family of the body */
+    line-height: 1.6; /* Set the line height of the body */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    color:#333; /* Set the color of the text */
+  }
+  /* Style for the navbar logo */
+  .logo img {
+    height: 50px; /* Set the height of the logo */
+    margin-right: 15px; /* Add margin to the right of the logo */
+  }
+  /* Style for the navbar */
+  .navbar {
+    display: flex;  /* Align items horizontally */
+    align-items: center;      /* Align items vertically */
+    justify-content: space-between; /* Space between the logo and the links */
+    color: white;  /* Set the color of the text */
+    background-color: #008080; /* Set the background color of the navbar */
+    padding: 10px 20px; /* Add padding to the navbar */
+    border: 10px;  /* Add border radius to the navbar */
+  }
+  
+  /* Style for the navbar links */
+  /* Navigation links */
+  .nav-links {
+    display: flex; /* Align links horizontally */
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .nav-links li {
+    margin: 0 15px; /* Add margin to the left and right of the links */
+  }
+  
+  .nav-links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the color of the links */
+    font-size: 16px; /* Set the font size of the links */
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .search {
+    display: flex; /* Align items horizontally */
+    align-items: center;    /* Align items vertically */
+    margin-left: auto; /* Align the search bar to the right */
+    
+  }
+  
+  .search input {
+    background-color: #eee7e7; /* Set the background color of the input */
+    color: rgb(9, 14, 17); /* Set the color of the text */
+    border-radius: 5px; /* Add border radius to the input */
+    border-color: rgb(18, 105, 105); /* Set the border color */
+    border-style: dotted; /* Set the border style */
+    padding: 5px;   /* Add padding to the input */
+    margin-right: 5px;  /* Add margin to the right of the input */
+  }
+  
+  .search button:hover {
+    background-color: #0a4545; /* Change the background color on hover */
+    color: white; /* Change the color on hover */
+  }
+  
+  .logo {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underline from the logo */
+  }
+  
+  
+    .hero {
+        background: url('heart-donation-hero.jpg') no-repeat center center/cover;
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .hero h1{
+        color: #008080;
+    }
+    .hero p{
+        color: black;
+    }
+    .about h2{
+        color: #008080;
+        text-align: center;
+    }
+    .about p{
+        color: black;
+        text-align: center;
+    }
+    .about h3{
+        color: #008080;
+        text-align: center;
+    }
+
+
+    .box{
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        flex-direction: column; /* Stack button and image vertically */
+        margin-bottom: 20px; /* Space between button and image */
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100px;
+        height: 20px;
+        background-color: #008080;
+        color: #f1eeee;
+        border-radius: 5px;
+
+    }
+    .button:hover {
+        background-color: #0a4545; /* Change the background color on hover */
+        color: white; /* Change the color on hover */
+    }
+    .donate h2{
+        color: #008080;
+        text-align: justify;
+    }   
+    .donate p{
+        color: black;
+        text-align: justify;
+    }
+    .about-image {
+        text-align: center; /* Center the image */
+        margin-top: 20px; /* Add margin top to give some space between button and image */
+    }
+    
+    .about-image img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 500px; /* Limit the image size for larger screens */
+    }
+
+footer{
+    background-color: #008080;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is lung donation?</h2>  
+            <p>Lung donation is the process of giving one or both of your lungs after death to help someone with severe lung disease or damage. The donated lungs can be transplanted into a person whose own lungs are no longer functioning properly, offering them a chance at survival and a better quality of life. It is a life-saving gift for people suffering from conditions like emphysema, pulmonary fibrosis, or cystic fibrosis. Lung donation typically requires the donor to be healthy prior to death, and the process is carefully managed to ensure the lungs are suitable for transplant.</p>
+        
+        <h2>Why do some people need lung transplants?</h2>
+            <p>People need lung transplants when their lungs are severely damaged by diseases like COPD, pulmonary fibrosis, or cystic fibrosis. These conditions make it hard to breathe and cause lung failure. A transplant offers a chance for a healthier, longer life. It replaces damaged lungs with healthy ones, improving breathing and quality of life. </p>
+    
+        <h2>Why become a lung donor?</h2>
+        <p>Becoming a lung donor can save the life of someone suffering from severe lung disease. It offers a chance for patients to breathe normally again and live a better life. Lung donation is a selfless act that can improve or extend someone’s life. It’s an impactful way to make a difference, even after death.</p>
+
+        <h2>How to Become a lung Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your lungs</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

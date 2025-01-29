@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is Kidney Donation?</h2>  
+            <p>Kidney donation is the process of giving one or both of your kidneys to someone whose kidneys are no longer functioning properly, often due to conditions like kidney failure, diabetes, or high blood pressure. A kidney transplant can restore normal kidney function, allowing the recipient to live a healthier life. Since people can live with just one healthy kidney, a living donor can donate one of their kidneys, or kidneys can be donated after death.</p>
+        
+        <h2>Why do some people need Kidney transplants?</h2>
+            <p>People need kidney transplants when their kidneys fail due to conditions like diabetes, high blood pressure, or polycystic kidney disease. Kidney failure makes it hard for the body to remove waste and balance fluids. A transplant gives them a healthy kidney to restore normal function. It improves their quality of life and helps them live longer. </p>
+    
+        <h2>Why become a Kidney donor?</h2>
+        <p>Becoming a kidney donor can save someone's life by providing them with a healthy kidney when theirs has failed. You can donate one of your kidneys while living a healthy life with the other. It's a selfless act that offers someone a chance at a longer, healthier life. Your donation can make a life-changing difference for someone in need.</p>
+
+        <h2>How to Become a Kidney Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your Kidney</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

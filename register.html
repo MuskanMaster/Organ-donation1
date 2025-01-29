@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif; /* Set the font family of the body */
+  line-height: 1.6; /* Set the line height of the body */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+/* Style for the navbar logo */
+.logo img {
+  height: 50px; /* Set the height of the logo */
+  margin-right: 15px; /* Add margin to the right of the logo */
+}
+/* Style for the navbar */
+.navbar {
+  display: flex;  /* Align items horizontally */
+  align-items: center;      /* Align items vertically */
+  justify-content: space-between; /* Space between the logo and the links */
+  color: white;  /* Set the color of the text */
+  background-color: #008080; /* Set the background color of the navbar */
+  padding: 10px 20px; /* Add padding to the navbar */
+  border: 10px;  /* Add border radius to the navbar */
+}
+
+/* Style for the navbar links */
+/* Navigation links */
+.nav-links {
+  display: flex; /* Align links horizontally */
+  list-style: none; /* Remove default bullet points */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Add margin to the left and right of the links */
+}
+
+.nav-links li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Set the color of the links */
+  font-size: 16px; /* Set the font size of the links */
+}
+
+.nav-links li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.search {
+  display: flex; /* Align items horizontally */
+  align-items: center;    /* Align items vertically */
+  margin-left: auto; /* Align the search bar to the right */
+  
+}
+
+.search input {
+  background-color: #eee7e7; /* Set the background color of the input */
+  color: rgb(9, 14, 17); /* Set the color of the text */
+  border-radius: 5px; /* Add border radius to the input */
+  border-color: rgb(18, 105, 105); /* Set the border color */
+  border-style: dotted; /* Set the border style */
+  padding: 5px;   /* Add padding to the input */
+  margin-right: 5px;  /* Add margin to the right of the input */
+}
+
+.search button:hover {
+  background-color: #0a4545; /* Change the background color on hover */
+  color: white; /* Change the color on hover */
+}
+
+.logo {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+  text-decoration: none; /* Remove underline from the logo */
+}
+        /* Main Container */
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .form-group button {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display:block;
+        }
+        
+
+        .form-group button:hover {
+            background-color: #005959;
+            color: white;
+        }
+
+        /* Image Section */
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="image-container">
+            <!-- Add an image at the top of the form -->
+            <img src="{{ url_for('static', filename='images/donor-image.jpg') }}" alt="Donor Image"> <!-- Replace with actual image URL -->
+        </div>
+        
+        <div class="title">Register Form</div>
+
+        <form id="register-form" action="#" method="POST" onsubmit="return validateForm()">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="register-age">Age:</label>
+                <input type="number" id="register-age" name="age" placeholder="Enter your age" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Blood Group -->
+            <div class="form-group">
+                <label for="register-blood-group">Blood Group:</label>
+                <select id="register-blood-group" name="blood_group" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+
+            <!-- Organization -->
+            <div class="form-group">
+                <label for="register-organization">Organization:</label>
+                <select id="register-organization" name="organization" required>
+                    <option value="none">none</option>
+                    <option value="Red Cross">Red Cross</option>
+                    <option value="Doctors Without Borders">Doctors Without Borders</option>
+                    <option value="Local NGO">Local NGO</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="register-phone">Phone Number:</label>
+                <input type="tel" id="register-phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <!-- Medical Condition -->
+            <div class="form-group">
+                <label>Do you have any medical condition?</label><br>
+                <input type="radio" id="yes" name="medical_condition" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="medical_condition" value="No">
+                <label for="no">No</label>
+            </div>
+            <!-- Message Box -->
+            <div class="form-group">
+                <label for="register-message">Message:</label>
+                <textarea id="register-message" name="message" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+    function validateForm() {
+    const name = document.getElementById('register-name').value.trim();
+    const email = document.getElementById('register-email').value.trim();
+    const age = document.getElementById('register-age').value.trim();
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const bloodGroup = document.getElementById('register-blood-group').value.trim();
+    const organization = document.getElementById('register-organization').value.trim();
+    const phone = document.getElementById('register-phone').value.trim();
+    const message = document.getElementById('register-message').value.trim();
+    const medicalCondition = document.querySelector('input[name="medical_condition"]:checked');
+
+    // Basic checks
+    if (!name || !email || !age || !gender || !bloodGroup || !phone || !medicalCondition) {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+
+    // Organization validation
+    if (organization && !/^[a-zA-Z\s.,'-]+$/.test(organization)) {
+        alert("Please enter a valid organization name.");
+        return false;
+    }
+
+    // Medical condition-specific message validation
+    if (medicalCondition.value === "Yes" && !message) {
+        alert("Please fill out the message field for medical conditions.");
+        return false;
+    }
+
+    // Phone validation
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Success
+    alert("Form submitted successfully!! We will Contact you soon.");
+
+    // Reset form fields
+    document.getElementById('register-form').reset(); // Reset all form fields after successful submission
+    // Redirect to home page
+    window.location.href = "/";
+    return false;
+}
+
+    </script>
+</body>

@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the navbar logo */
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Style for the navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: #008080;
+    padding: 10px 20px;
+    border: 10px;
+}
+
+/* Style for the navbar links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search input {
+    background-color: #eee7e7;
+    color: rgb(9, 14, 17);
+    border-radius: 5px;
+    border-color: rgb(18, 105, 105);
+    border-style: dotted;
+    padding: 5px;
+    margin-right: 5px;
+}
+.search button{
+    color:  black;
+}
+.search button:hover {
+    background-color: #0a4545;
+    color: white;
+}
+/* Button Styles */
+
+.card1 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Centers the card on the page */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between form elements */
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto; /* Centers the button horizontally */
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0a4545; /* Slightly darker green on hover */
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #008080; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Form Container */
+.details {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card1 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card1 h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #008080;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

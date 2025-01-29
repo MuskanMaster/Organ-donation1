@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  font-family: Arial, sans-serif; /* Set the font family of the body */
+  line-height: 1.6; /* Set the line height of the body */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+/* Style for the navbar logo */
+.logo img {
+  height: 50px; /* Set the height of the logo */
+  margin-right: 15px; /* Add margin to the right of the logo */
+}
+/* Style for the navbar */
+.navbar {
+  display: flex;  /* Align items horizontally */
+  align-items: center;      /* Align items vertically */
+  justify-content: space-between; /* Space between the logo and the links */
+  color: white;  /* Set the color of the text */
+  background-color: #008080; /* Set the background color of the navbar */
+  padding: 10px 20px; /* Add padding to the navbar */
+  border: 10px;  /* Add border radius to the navbar */
+}
+
+/* Style for the navbar links */
+/* Navigation links */
+.nav-links {
+  display: flex; /* Align links horizontally */
+  list-style: none; /* Remove default bullet points */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.nav-links li {
+  margin: 0 15px; /* Add margin to the left and right of the links */
+}
+
+.nav-links li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Set the color of the links */
+  font-size: 16px; /* Set the font size of the links */
+}
+
+.nav-links li a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.search {
+  display: flex; /* Align items horizontally */
+  align-items: center;    /* Align items vertically */
+  margin-left: auto; /* Align the search bar to the right */
+  
+}
+
+.search input {
+  background-color: #eee7e7; /* Set the background color of the input */
+  color: rgb(9, 14, 17); /* Set the color of the text */
+  border-radius: 5px; /* Add border radius to the input */
+  border-color: rgb(18, 105, 105); /* Set the border color */
+  border-style: dotted; /* Set the border style */
+  padding: 5px;   /* Add padding to the input */
+  margin-right: 5px;  /* Add margin to the right of the input */
+}
+
+.search button:hover {
+  background-color: #0a4545; /* Change the background color on hover */
+  color: white; /* Change the color on hover */
+}
+
+.logo {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+  text-decoration: none; /* Remove underline from the logo */
+}
+.maintext {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between the logo and the links */
+  padding: 50px; /* Add padding to the main text */
+  background-color: #f9f9f9; /* Set the background color of the main text */
+  margin-left: 700px; /* Add margin to the left of the main text */
+}
+
+.mainText h1 {
+  font-family: "Times New Roman", Times, serif; /* Set the font family of the heading */
+  font-size: 5em; /* Set the font size of the heading */
+  margin: 10px 0;   /* Add margin to the top and bottom of the heading */
+  color: grey; /* Set the color of the heading */
+  text-align: center; /* Align the text to the center */
+  flex-direction: row; /* Set the direction of the text */
+}
+
+.mainText p {
+  text-align: center; /* Align the text to the center */
+  color: black; /* Set the color of the text */
+  font-family: Georgia, "Times New Roman", Times, serif; /* Set the font family of the text */
+  font-size: 1em; /* Set the font size of the text */
+  flex-direction: row; /* Set the direction of the text */
+}
+
+.button-1{
+    display: flex; /* Align items horizontally */
+    align-content: center; /* Align items vertically */
+
+}
+
+.box{
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.button {
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Set the font size of the button */
+  cursor: pointer; /* Set the cursor to pointer */
+  width: 100px; /* Set the width of the button */
+  height: 20px; /* Set the height of the button */
+  background-color: #008080; /* Set the background color of the button */
+  color: #f1eeee; /* Set the color of the text */
+  border-radius: 5px; /* Add border radius to the button */
+  text-align: center; /* Align the text to the center */
+}
+
+.content1{
+    margin-right: 40px; /* Add margin to the right of the content */
+    margin-left: 40px; /* Add margin to the left of the content */
+}
+
+.content1 h1 {
+  text-align: center; /* Align the text to the center */
+  color: #0e0d0d; /* Set the color of the text */
+}
+
+.organ{
+       align-content: center; /* Align items vertically */
+       flex-direction: auto; /* Set the direction of the text */
+}
+
+.content1 img {
+  width: 200px; /* Set the width of the image */
+  height: 200px; /* Set the height of the image */
+  border-radius: 50%;   /* Add border radius to the image */
+  align-content: center; /* Align items vertically */
+  box-shadow: 5px rgba(0, 0, 0.1); /* Add shadow to the image */
+  margin-right: 15px;  /* Add margin to the right of the image */
+  box-sizing: border-box;  /* Set the box-sizing property */
+  border-color: black; /* Set the border color */
+  border-style: dashed; /* Set the border style */
+  flex-direction:auto; /* Set the direction of the text */
+  margin-bottom: 10px; /* Add margin to the bottom of the image */
+  margin-left: 15px; /* Add margin to the left of the image */
+}
+
+footer{
+  background-color: #008080; /* Set the background color of the footer */
+  color: white;  /* Set the color of the text */
+  text-align: center;  /* Align the text to the center */
+  margin-bottom: 0px;  /* Add margin to the bottom of the footer */
+  border-radius: 10px; /* Add border radius to the footer */
+}

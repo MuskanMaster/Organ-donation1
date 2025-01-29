@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is Heart Donation?</h2>  
+            <p>The heart is the main organ of the circulatory system.It continuously pumps blood around the body, beating around 100,000 times every day.The blood that passes through the heart delivers vital oxygen and nutrients to all parts of the body, and gets rid of unwanted carbon dioxide.Choosing to donate your heart could save someone's life.</p>
+        
+        <h2>Why do some people need heart transplants?</h2>
+            <p>When the heart can no longer pump blood as well as it should, a person is said to be in heart failure.Someone with this condition may feel extremely tired, be short of breath and have swelling in the legs and ankles where blood cannot get back to the heart effectively.Heart failure can often be brought on by diseases that cause weakening of the heart muscle or blockages of the blood vessels leading to the heart. Some heart problems present at birth can also lead to heart failure.While heart failure can be treated, it is a very serious condition that will likely get slowly worse over time, and can eventually be fatal. </p>
+    
+        <h2>Why become a heart donor?</h2>
+        <p>When treatments such as medicines or lifestyle changes stop working for someone with heart failure, a transplant may be the only option.However, there are never enough donor hearts for all the people waiting for a heart transplant.Heart failure can often be brought on by diseases that cause weakening of the heart muscle or blockages of the blood vessels leading to the heart. Some heart problems present at birth can also lead to heart failure.If you choose to become a heart donor when you die, you could be saving someone's life.</p>
+
+        <h2>How to Become a Heart Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your Heart</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

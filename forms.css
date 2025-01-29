@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif; /* Set the font family of the body */
+    line-height: 1.6; /* Set the line height of the body */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  /* Style for the navbar logo */
+  .logo img {
+    height: 50px; /* Set the height of the logo */
+    margin-right: 15px; /* Add margin to the right of the logo */
+  }
+  /* Style for the navbar */
+  .navbar {
+    display: flex;  /* Align items horizontally */
+    align-items: center;      /* Align items vertically */
+    justify-content: space-between; /* Space between the logo and the links */
+    color: white;  /* Set the color of the text */
+    background-color: #008080; /* Set the background color of the navbar */
+    padding: 10px 20px; /* Add padding to the navbar */
+    border: 10px;  /* Add border radius to the navbar */
+  }
+  
+  /* Style for the navbar links */
+  /* Navigation links */
+  .nav-links {
+    display: flex; /* Align links horizontally */
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+  
+  .nav-links li {
+    margin: 0 15px; /* Add margin to the left and right of the links */
+  }
+  
+  .nav-links li a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the color of the links */
+    font-size: 16px; /* Set the font size of the links */
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .search {
+    display: flex; /* Align items horizontally */
+    align-items: center;    /* Align items vertically */
+    margin-left: auto; /* Align the search bar to the right */
+    
+  }
+  
+  .search input {
+    background-color: #eee7e7; /* Set the background color of the input */
+    color: rgb(9, 14, 17); /* Set the color of the text */
+    border-radius: 5px; /* Add border radius to the input */
+    border-color: rgb(18, 105, 105); /* Set the border color */
+    border-style: dotted; /* Set the border style */
+    padding: 5px;   /* Add padding to the input */
+    margin-right: 5px;  /* Add margin to the right of the input */
+  }
+  
+  .search button:hover {
+    background-color: #0a4545; /* Change the background color on hover */
+    color: white; /* Change the color on hover */
+  }
+  
+  .logo {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underline from the logo */
+  }
+/* container for layout  */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Heading Styles */
+h1, h2 {
+    color: #008080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto;
+    display:block;
+}
+button[type="submit"]:hover {
+    background-color: #0c5f5f;
+}
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Signup Image Round and Smaller */
+.signup-image img {
+    width: 100px; /* Set the width of the image */
+    height: 100px; /* Set the height of the image */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Maintain aspect ratio of the image */
+    display: block; /* Ensure it is a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+  }
+
+  form {
+      padding: 15px;
+  }
+}
+/* Modal Popup Styles */
+.popup-modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

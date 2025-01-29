@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intestine Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is intestine Donation?</h2>  
+            <p>Intestine donation is the process of donating a portion or all of the intestines after death to help patients with severe intestinal failure or diseases. People who need an intestine transplant may have conditions that prevent their intestines from absorbing nutrients properly, such as short bowel syndrome, Crohn's disease, or intestinal cancer. A donated intestine can help restore normal digestion and nutrient absorption, improving the recipient's quality of life and potentially saving their life.</p>
+        
+        <h2>Why do some people need intestine transplants?</h2>
+            <p>People need an intestine transplant when their intestines can't absorb nutrients properly due to diseases like Crohn's or short bowel syndrome. This can lead to severe malnutrition and digestive problems. A transplant helps restore normal digestion and nutrient absorption. It gives patients a chance for a healthier life.</p>
+    
+        <h2>Why become a intestine donor?</h2>
+        <p>Becoming an intestine donor can save the life of someone with severe digestive issues or intestinal failure. It offers a chance for patients to properly absorb nutrients and live a healthier life. Intestine donation is a selfless act that makes a huge difference for those in need. It’s a powerful way to give someone a better future, even after you’re gone.</p>
+
+        <h2>How to Become a intestine Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your intestine</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

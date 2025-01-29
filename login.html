@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+            <li><a href="{{ url_for('donation') }}">Donation</a></li>
+            <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </nav>
+</header>
+
+  <!-- Notification Box (Appears at the top) -->
+  <div id="notificationBox" style="display:none; padding: 10px; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); width: 300px; text-align: center; border-radius: 5px;">
+  </div>
+
+      <!-- Popup Modal for Success/Error -->
+      <div id="popupModal" class="popup-modal">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="popupMessage"></p>
+        </div>
+    </div>
+
+  <div class="container">
+    <h2>Login</h2>
+ 
+    <form id="loginForm">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <br>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      
+      <a href="{{ url_for('forget') }}">Forgot password?</a>
+      <br>
+      <button type="submit">Login</button>
+      <br>
+      <p>you have sign up? <a href="{{ url_for('signup') }}">signup</a></p>
+  </form>  
+  </div>
+
+  <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Donation Awareness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/organ.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <a href="{{ url_for('home') }}" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about">
+        <h2>What is eye Donation?</h2>  
+            <p>Eye donation is the process of giving your eyes (or corneas) after death to help restore vision in people who are blind or visually impaired. The cornea, the clear outer layer of the eye, can be transplanted into someone whose cornea is damaged or diseased. This donation can improve or restore sight, and it's a simple, life-changing gift for those in need. Eye donation doesn’t affect the donor’s appearance or funeral plans.</p>
+        
+        <h2>Why is eye donation?</h2>
+            <p>You may hear people talk about 'eye donation', but eyes are never transplanted whole.Eye donation involves donating your corneas, not your iris or the whole eye.This is why, when you choose to become a donor, you will see corneas among the list of organs and tissue you can choose to donate. </p>
+    
+        <h2>Why become a eye donor?</h2>
+            <p>Becoming an eye donor helps restore sight to those suffering from blindness, giving them a chance at a better life. It’s a selfless, simple act that can impact multiple people. Eye donation is easy and doesn’t affect funeral plans. It’s a meaningful way to leave a lasting legacy of kindness.</p>
+
+        <h2>How to Become a Eye Donor</h2>
+            <p>1. Register as an organ donor through your local health department or online registry.</p>
+            <p>2. Inform your family about your decision to donate.</p>
+            <p>3. Learn about the donation process and what to expect.</p>
+    </div>
+        <div class="box">
+        <a href="{{ url_for('register') }}" class="button">  Register Now</a>
+        </div>
+    </div>
+
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/organ.jpg') }}" alt="heart image">
+    </div>
+    
+
+    <div class="hero">
+        <h1>Give the Gift of Life: Donate Your eyes</h1>
+        <p>Your donation can save lives and give hope to those in need.</p>
+    </div>
+    
+    <div class="box">
+        <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    
+    <footer>
+        <p>&copy; 2025 Heart Donation Org. All Rights Reserved.</p>
+    </footer>
+    
+</div>
+    <script src="{{ url_for('static', filename='js/organ.js') }}"></script>
+</body>
+</html>

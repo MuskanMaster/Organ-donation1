@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+
+        }
+        .logo img {
+            height: 50px; /* Set the height of the logo */
+            margin-right: 15px; /* Add margin to the right of the logo */
+        }
+        /* Style for the navbar */
+        .navbar {
+            display: flex;  /* Align items horizontally */
+            align-items: center;      /* Align items vertically */
+            justify-content: space-between; /* Space between the logo and the links */
+            color: white;  /* Set the color of the text */
+            background-color: #008080; /* Set the background color of the navbar */
+            padding: 10px 20px; /* Add padding to the navbar */
+            border: 10px;  /* Add border radius to the navbar */
+        }
+
+        /* Style for the navbar links */
+        /* Navigation links */
+        .nav-links {
+            display: flex; /* Align links horizontally */
+            list-style: none; /* Remove default bullet points */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+
+        .nav-links li {
+            margin: 0 15px; /* Add margin to the left and right of the links */
+        }
+
+        .nav-links li a {
+            text-decoration: none; /* Remove underline from links */
+            color: white; /* Set the color of the links */
+            font-size: 16px; /* Set the font size of the links */
+        }
+
+        .nav-links li a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        .search {
+            display: flex; /* Align items horizontally */
+            align-items: center;    /* Align items vertically */
+            margin-left: auto; /* Align the search bar to the right */
+        }
+
+        .search input {
+            background-color: #eee7e7; /* Set the background color of the input */
+            color: rgb(9, 14, 17); /* Set the color of the text */
+            border-radius: 5px; /* Add border radius to the input */
+            border-color: rgb(18, 105, 105); /* Set the border color */
+            border-style: dotted; /* Set the border style */
+            padding: 5px;   /* Add padding to the input */
+            margin-right: 5px;  /* Add margin to the right of the input */
+        }
+
+        .search button:hover {
+            background-color: #0a4545; /* Change the background color on hover */
+            color: white; /* Change the color on hover */
+        }
+
+        .logo {
+            display: flex; /* Align items horizontally */
+            align-items: center; /* Align items vertically */
+            text-decoration: none; /* Remove underline from the logo */
+        }
+        /* Container for layout */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1, h2 {
+            color: #008080;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Form Styles */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Button Styles */
+        button[type="submit"] {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 20px auto;
+            display: block;
+            
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0c5f5f;
+        }
+
+        /* Responsive Map */
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* Social Media Links */
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 0 10px;
+        }
+
+        ul li img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Background Section */
+        .background-section {
+            background-image: url('your-background.jpg');
+            background-size: cover;
+            padding: 40px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Blockquote Styling */
+        blockquote {
+            background-color: #008080;
+            padding: 20px;
+            border-left: 5px solid #0c5f5f;
+            margin: 20px 0;
+            font-style: italic;
+            color: white;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #008080;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Website Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Home</a></li> <!-- Link back to Home -->
+                <li><a href="{{ url_for('about') }}">About us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+                <li><a href="{{ url_for('donation') }}">Donation</a></li>
+                <li class="material-symbol-outlined"><a href="{{ url_for('signup') }}">Login</a>
+                </li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to contact us at:</p>
+        <ul>
+            <li>Email: <a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></li>
+            <li>Phone: <a href="tel:+1234567890">+1234567890</a></li>
+        </ul>
+
+        <form action="/submit-form" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2>Our Location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAP_EMBED_LINK"
+            allowfullscreen="" loading="lazy">
+        </iframe>
+
+        <h2>Follow Us</h2>
+        <ul>
+            <li><a href="https://facebook.com/yourpage" target="_blank"><img src="{{ url_for('static', filename='images/facebook.jpg') }}" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/yourpage" target="_blank"><img src="{{ url_for('static', filename='images/twitter.jpg') }}"></a></li>
+            <li><a href="https://instagram.com/yourpage" target="_blank"><img src="{{ url_for('static', filename='images/instagram.jpg') }}" alt="Instagram"></a></li>
+        </ul>
+
+        <div class="background-section">
+            <h1>Get in Touch</h1>
+        </div>
+
+        <h2>What Our Clients Say</h2>
+        <blockquote>
+            "The support team was amazing! They responded to my query within minutes."   John Doe
+        </blockquote>
+        
+       
+    </div>
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Select the form element
+        const form = document.querySelector('form');
+        
+        // Add event listener for form submission
+        form.addEventListener('submit', function(event) {
+            // Prevent the form from actually submitting (for demonstration purposes)
+            event.preventDefault();
+
+            // Get form input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic validation for empty fields
+            if (!name || !email || !message) {
+                alert("All fields are required!");
+                return;
+            }
+
+            // Simulate form submission success
+            alert("Thank you for your message, " + name + "! We will get back to you shortly.");
+
+            // Optionally clear the form after submission
+            form.reset();
+              // Redirect to the login page
+              window.location.href = "/";
+        });
+
+        // Optional: Enable simple client-side validation (for email format)
+        document.getElementById('email').addEventListener('input', function() {
+            const email = this.value;
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            const emailErrorMessage = document.getElementById('email-error');
+
+            if (!emailPattern.test(email)) {
+                if (!emailErrorMessage) {
+                    const errorMessage = document.createElement('p');
+                    errorMessage.id = 'email-error';
+                    errorMessage.style.color = 'red';
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    form.appendChild(errorMessage);
+                }
+            } else {
+                const existingErrorMessage = document.getElementById('email-error');
+                if (existingErrorMessage) {
+                    existingErrorMessage.remove();
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
